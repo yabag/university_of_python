@@ -28,14 +28,14 @@ for i in range(1, num + 1):
     if is_simple_number(i) == True:
         if i < 20:
             print(f'Найдено простое число: {i}')
-            print(f'Это простое число меньше 20, его факториал равен {calculation_of_factorial(i)}')
+            print(f'Это простое число меньше 20, его факториал равен {calculation_of_factorial(i)}\n')
         else:
-            print(f'Найдено простое число: {i}')
+            print(f'Найдено простое число: {i}\n')
 
     if is_perfect_number(i) == True:
         if i > 20:
             print(f'Найдено совершенное число: {i}')
-            print(f'Это совершенное число болше 20, его корень равен {i**0.5}')
+            print(f'Это совершенное число болше 20, его корень равен {i**0.5}\n')
         else:
-            print(f'Найдено совершенное число: {i}')
+            print(f'Найдено совершенное число: {i}\n')
 
