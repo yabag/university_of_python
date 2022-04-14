@@ -5,10 +5,11 @@ def is_perfect_number(n):
         if n % i == 0:
             total += i
 
-    if total == n or n == 1:
-        return True
-    else:
-        return False
+    return (False, True)[total == n or n == 1]
+#    if total == n or n == 1:
+#        return True
+#    else:
+#        return False
 
 n = int(input())
 print(is_perfect_number(n))
