@@ -6,5 +6,3 @@ def divisors_of_number(n):
     return list_divisors
 
 
-for i in total_of_flowers:
-     = divisors_of_number(i)
