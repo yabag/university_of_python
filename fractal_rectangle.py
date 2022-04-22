@@ -1,11 +1,18 @@
 import graphics as gr
 
-window = gr.GraphWin('Russian game', 300, 300)
+window = gr.GraphWin('Russian game', 600, 600)
+alfa = 0.2
+
 
 def fractal_rectangle(A, B, C, D, deep=10):
     if deep < 1:
         return
-    gr.Line(gr.Point(*A))
+    for M, N in (A, B), (B, C), (C, D), (D, A):
+        gr.Line(gr.Point(*M), gr.Point(*N)).draw(window)
+    A1 = (A[0] * (1 - alfa) + B[0] * alfa, A[1] * (1 - alfa) + B[1] * alfa)
+    B1 = (B[0] * (1 - alfa) + C[0] * alfa, B[1] * (1 - alfa) + C[1] * alfa)
+    C1 = (C[0] * (1 - alfa) + D[0] * alfa, C[1] * (1 - alfa) + D[1] * alfa)
+    A1 = (D[0] * (1 - alfa) + A[0] * alfa, D[1] * (1 - alfa) + A[1] * alfa)
 
-my_rectangle = gr.Rectangle(gr.Point(2, 4), gr.Point(4, 8))
-my_rectangle.draw(window)
+
+fractal_rectangle((100, 100), (500, 100), (500, 500), (100, 500), 100)

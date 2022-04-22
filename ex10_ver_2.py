@@ -20,12 +20,7 @@ def gcd(a, b):
     '''
     Функция определения наибольшего общего делителя двух чисел.
     '''
-    while a > 0 and b > 0:
-        if a > b:
-            a %= b
-        else:
-            b %= a
-    return a + b
+    return a if b == 0 else gcd(b, a % b)
 
 
 for i in range(0, len(total_of_flowers) - 1):
