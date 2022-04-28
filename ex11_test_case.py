@@ -9,6 +9,8 @@ def gcd(a, b):
   a - целое положительное число
   b - целое положительное число
     '''
+    if a < 0 or b < 0:
+        raise ValueError('a and b must be greater than 0')
     return a if b == 0 else gcd(b, a % b)
 
 
@@ -32,7 +34,7 @@ def test_error_case():
 
     a = -1
     b = -2
-    expected_error = 'a и b должны быть больше чем 0'
+    expected_error = 'a and b must be greater than 0'
     actual_error = None
 
     try:
