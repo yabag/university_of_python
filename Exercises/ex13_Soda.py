@@ -2,10 +2,10 @@ import enum
 
 
 class Options(enum.Enum):
-    nothing = 0
-    cola = 1
-    fanta = 2
-    sprite = 3
+    Nothing = 0
+    CocaCola = 1
+    Sprite = 2
+    Fanta = 3
 
 
 class Soda:
@@ -16,12 +16,13 @@ class Soda:
         self.additive = additive
 
     def show_my_drink(self):
-        if self.additive == '0':
+
+        if self.additive == Options.Nothing.value:
             print("Обычная газировка.")
         else:
             print("Газировка и {}".format(self.additive))
 
 
 if __name__ == "__main__":
-    drink = Soda(input("Введите желаемую добавку к газировке или 0 если хотите получить 'обычную газироку': "))
+    drink = Soda(int(input("Введите желаемую добавку к газировке: ")))
     drink.show_my_drink()
