@@ -2,10 +2,8 @@ import enum
 
 
 class Options(enum.Enum):
-    Nothing = 0
-    CocaCola = 1
-    Sprite = 2
-    Fanta = 3
+    Nothing = 'nothing'
+    Others = ['CocaCola', 'Sprite', 'Fanta']
 
 
 class Soda:
@@ -19,8 +17,10 @@ class Soda:
 
         if self.additive == Options.Nothing.value:
             print("Обычная газировка.")
-        else:
+        elif self.additive in Options.Others.value:
             print("Газировка и {}".format(self.additive))
+        else:
+            raise "Error"
 
 
 if __name__ == "__main__":
