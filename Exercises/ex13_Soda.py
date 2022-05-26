@@ -24,5 +24,5 @@ class Soda:
 
 
 if __name__ == "__main__":
-    drink = Soda(int(input("Введите желаемую добавку к газировке: ")))
+    drink = Soda(input("Введите желаемую добавку к газировке: "))
     drink.show_my_drink()

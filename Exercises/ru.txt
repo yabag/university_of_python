@@ -1,0 +1,67 @@
+/*
+ Localizable.strings
+ TheRun
+
+ Created by incetro on 29/03/2018.
+ Copyright © 2019 incetro. All rights reserved.
+ */
+
+"attention" = "Внимание!";
+
+"today" = "Сегодня";
+"clear" = "Очистить";
+"share" = "Поделиться";
+"yes" = "Да";
+"no" = "Нет";
+"ok" = "Ок";
+"done" = "Готово";
+"cancel" = "Отмена";
+"remove" = "Удалить";
+"delete" = "Удалить";
+"edit" = "Редактировать";
+"open" = "Открыть";
+"close" = "Закрыть";
+"retry" = "Повторить";
+"distance" = "%@ %@";
+"meters" = "м";
+"kilometers" = "км";
+"speed" = "%@ %@";
+"kmh" = "км/ч";
+"next" = "Далее";
+"start" = "Старт";
+"stop" = "Стоп";
+"choose-your-action" = "Выберите действие";
+"warning" = "Внимание";
+"search.title" = "Поиск";
+"search.people" = "Люди";
+"search.routes" = "Маршруты";
+"search.tournaments" = "Турниры";
+"search.empty" = "Ничего не найдено";
+"search.empty.extended.users" = "Вы можете воспользоваться фильтром для поиска новых пользователей";
+"search.empty.extended.tracks" = "Вы можете воспользоваться фильтром для поиска новых маршрутов";
+"to-start.distance" = "%@ до старта";
+"to-start.too-close" = "Вы здесь";
+"favorite" = "Избранное";
+"unfavorite" = "Удалить из избранного";
+"plus" = "+";
+"minus" = "−";
+"continue" = "Продолжить";
+"return" = "Вернуться";
+"dont-show-again" = "Больше не показывать";
+"reset" = "Переустановить";
+"at" = "в";
+
+"time.h" = "ч";
+"time.m" = "м";
+"time.s" = "с";
+
+"time.hours" = "ч";
+"time.minutes" = "мин";
+"time.seconds" = "с";
+
+"deadline.days" = "д.";
+"deadline.hours" = "ч.";
+"deadline.minutes" = "мин.";
+"deadline.seconds" = "сек.";
+
+"some.existing.str.one" = "One";

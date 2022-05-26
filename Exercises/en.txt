@@ -1,0 +1,67 @@
+/* 
+  Localizable.strings
+  TheRun
+
+  Created by incetro on 29/03/2018.
+  Copyright © 2019 incetro. All rights reserved.
+*/
+
+"attention" = "Attention!";
+
+"today" = "Today";
+"clear" = "Clear";
+"share" = "Share";
+"yes" = "Yes";
+"no" = "No";
+"ok" = "OK";
+"done" = "Done";
+"cancel" = "Cancel";
+"remove" = "Remove";
+"delete" = "Delete";
+"edit" = "Edit";
+"open" = "Open";
+"close" = "Close";
+"retry" = "Try again";
+"distance" = "%@ %@";
+"meters" = "m";
+"kilometers" = "km";
+"speed" = "%@ %@";
+"kmh" = "km/h";
+"next" = "Next";
+"start" = "Start";
+"stop" = "Stop";
+"choose-your-action" = "Choose an action";
+"warning" = "Warning";
+"search.title" = "Search";
+"search.people" = "People";
+"search.routes" = "Tracks";
+"search.tournaments" = "Tournaments";
+"search.empty" = "Nothing found";
+"search.empty.extended.users" = "You can use the filter to find new users";
+"search.empty.extended.tracks" = "You can use the filter to find new tracks";
+"to-start.distance" = "%@ to start";
+"to-start.too-close" = "You are here";
+"favorite" = "Favorite";
+"unfavorite" = "Remove from favorite";
+"plus" = "+";
+"minus" = "−";
+"continue" = "Continue";
+"return" = "Return";
+"dont-show-again" = "Don't show again";
+"reset" = "Reset";
+"at" = "at";
+
+"time.h" = "h";
+"time.m" = "m";
+"time.s" = "s";
+
+"time.hours" = "h";
+"time.minutes" = "min";
+"time.seconds" = "s";
+
+"deadline.days" = "day(s)";
+"deadline.hours" = "hour(s)";
+"deadline.minutes" = "min.";
+"deadline.seconds" = "sec.";
+
+"some.existing.str.two" = "Two";
