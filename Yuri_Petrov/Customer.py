@@ -1,4 +1,5 @@
-from CallPlan import CallPlanSimple
+from Call_Plan import CallPlanSimple
+
 
 class Customer:
     """Клиент телефонной компании."""
