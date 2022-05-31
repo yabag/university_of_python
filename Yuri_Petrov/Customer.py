@@ -8,12 +8,12 @@ class Customer:
         self.name = name
         self._balance = balance
         self.call_plan = call_plan
-        # Если тарифный план не был указан, используем CallPlanSimble()
+        # Если тарифный план не был указан, используем CallPlanSimple()
         if self.call_plan is None:
-            self.call_plan = CallPlanSimple
+            self.call_plan = CallPlanSimple()
 
     def __str__(self):
-        return "Клиент \"{}\". Баланс: {} руб. Тариф: \"{}\"".format(self.name, self._balance, self.call_plan.name)
+        return "Клиент \"{}\". Баланс: {} руб. Тариф: \"{}\"".format(self.name, self.balance, self.call_plan.name)
 
     @property
     def balance(self):
@@ -37,7 +37,7 @@ class Customer:
                 "М": мобильный;
 
             - minutes (int): количество минут разговора.
-            """
+        """
         # Делегируем определение стоимости звонка классу call_plan
         costs = self.call_plan.record_call(call_type, minutes)
         self._balance -= costs

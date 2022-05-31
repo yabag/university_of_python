@@ -8,7 +8,7 @@ class CallPlan:
         """Списать стоимость звонка с баланса клиента.
 
         Параметры:
-            - call_type (str): тип звонка;
+            - call_type (str): тип звонка:
                 "Г": городской;
                 "М": мобильный;
 
@@ -56,7 +56,7 @@ class CallPlanFree2ndMinuteAfter10(CallPlanSimple):
         else:
             bonus_minutes = 0
 
-        # Вызываем родительский метод расчёта
+        # Вызываем родительский метод расчета
         return super().record_call_g(minutes - bonus_minutes)
 
 
@@ -75,4 +75,5 @@ class CallPlanTwiceCheaperFirst5Minutes(CallPlanSimple):
             expensive_minutes = 0
 
         # Вызываем родительский метод расчета
-        return super().record_call(call_type, cheap_minutes / 2 + expensive_minutes * 2)
+        return super().record_call(call_type, cheap_minutes / 2 +
+                                   expensive_minutes * 2)
