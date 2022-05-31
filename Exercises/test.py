@@ -1,19 +1,18 @@
-from __future__ import annotations
-
 import enum
 
 
-class Options(enum.Enum):
-    Cola = 'cocacola'
-    Sprite = 'sprite'
-    Fanta = 'fanta'
+class Additive(enum.Enum):
+    SUGAR = 'sugar'
+    LEMON = 'lemon'
+    ICE = 'ice'
+
 
     @property
     def description(self) -> str:
         descriptions = {
-            self.Cola: 'cocacola',
-            self.Sprite: 'sprite',
-            self.Fanta: 'fanta'
+            self.SUGAR: 'сахар',
+            self.LEMON: 'лимон',
+            self.ICE: 'лёд'
         }
 
         description = descriptions.get(self)
@@ -27,7 +26,7 @@ class Soda:
     """Запрашивает у пользователя желаемую добавку к газировке
     и выводит получившийся напиток."""
 
-    def __init__(self, additive: Options | None = None):
+    def __init__(self, additive: Additive | None = None):
         self.additive = additive
 
     def show_my_drink(self):
@@ -38,5 +37,5 @@ class Soda:
 
 
 if __name__ == "__main__":
-    drink = Soda(input("Введите желаемую добавку к газировке: "))
+    drink = Soda(Additive.ICE)
     drink.show_my_drink()
