@@ -5,9 +5,13 @@ class Graph:
     LIMIT_Y = [0, 10]
 
     def draw(self):
-        return print(*self.data)
+        numbers = []
+        for num in self.data:
+            if -1 < num < 11:
+                numbers.append(num)
+        return print(*numbers)
 
 
-graph1 = Graph()
-graph1.set_data([10, -5, 100, 20, 0, 80, 45, 2, 5, 7])
-graph1.draw()
+graph_1 = Graph()
+graph_1.set_data([10, -5, 100, 20, 0, 80, 45, 2, 5, 7])
+graph_1.draw()
