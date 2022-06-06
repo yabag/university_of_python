@@ -5,11 +5,7 @@ class Graph:
     LIMIT_Y = [0, 10]
 
     def draw(self):
-        numbers = []
-        for num in self.data:
-            if -1 < num < 11:
-                numbers.append(num)
-        return print(*numbers)
+        return print(*list(filter(lambda x: self.LIMIT_Y[0] <= x <= self.LIMIT_Y[1], self.data)))
 
 
 graph_1 = Graph()
