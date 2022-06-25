@@ -1,14 +1,10 @@
-s = input()
-link = '+7(xxx)xxx-xx-xx'
-flag = True
+s = input().replace(' ', '')
 
-for i, l in enumerate(s):
-    if l == link[i]:
-        continue
-    elif l.isdigit() and 'x' == link[i]:
-        continue
-    else:
-        flag = False
-        break
+x = s.replace('+', ' +').replace('-', ' -').split(' ')
+total = 0
 
-print("ДА" if flag else "НЕТ")
+for i in x:
+    i = int(i)
+    total += i
+
+print(total)
