@@ -1,16 +1,14 @@
 s = input()
-num = '0123456789'
+link = '+7(xxx)xxx-xx-xx'
 flag = True
 
-for i, d in enumerate(s):
-    if not flag:
+for i, l in enumerate(s):
+    if l == link[i]:
+        continue
+    elif l.isdigit() and 'x' == link[i]:
+        continue
+    else:
         flag = False
         break
-    elif not s.startswith('+7('):
-        flag = False
-    elif (i == 6 and d == ')') or ((i == 10 or i == 13) and (d not in '-')):
-        flag = False
-    elif
 
-
-
+print("ДА" if flag else "НЕТ")
