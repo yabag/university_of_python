@@ -1,10 +1,4 @@
-s = input().replace(' ', '')
+N = int(input())
 
-x = s.replace('+', ' +').replace('-', ' -').split(' ')
-total = 0
-
-for i in x:
-    i = int(i)
-    total += i
-
-print(total)
+lst = [[1 if i == j else 0 for i in range(N)] for j in range(N)]
+print(lst)
