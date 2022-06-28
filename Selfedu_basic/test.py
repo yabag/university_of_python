@@ -1,4 +1,10 @@
-N = int(input())
+n = int(input())
+k = [64, 32, 16, 8, 4, 2, 1]
+total = []
 
-lst = [[1 if i == j else 0 for i in range(N)] for j in range(N)]
-print(lst)
+for i in k:
+    while n >= i:
+        n -= i
+        total.append(i)
+
+print(*total)
