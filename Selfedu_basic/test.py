@@ -1,10 +1,5 @@
-n = int(input())
-k = [64, 32, 16, 8, 4, 2, 1]
-total = []
+lst = input().split()
+d = dict([[x for x in s.split('=')] for s in lst])
 
-for i in k:
-    while n >= i:
-        n -= i
-        total.append(i)
-
-print(*total)
+print(*sorted(d.items()))
+# print(d)
