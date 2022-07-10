@@ -1,11 +1,15 @@
-import sys
+things = {'карандаш': 20, 'зеркальце': 100, 'зонт': 500, 'рубашка': 300,
+          'брюки': 1000, 'бумага': 200, 'молоток': 600, 'пила': 400, 'удочка': 1200,
+          'расческа': 40, 'котелок': 820, 'палатка': 5240, 'брезент': 2130, 'спички': 10}
 
-lst_in = list(map(str.strip, sys.stdin.readlines()))
-d = dict.fromkeys(lst_in)
+things_wight = {v: k for k, v in things.items()}
+sorted(things_wight)
+# print(things_wight)
 
-d_items = dict([[k, v] for k, v in [s.split() for s in lst_in]])
+N = int(input())*1000
 
-for item in d_items:
-    d.setdefault()
-
-print(d)
+while N > 0:
+    the_whitest_thing = sorted(things_wight).pop(-1)
+    print(things_wight[the_whitest_thing])
+    N -= int(the_whitest_thing)
+    del things_wight[the_whitest_thing]
