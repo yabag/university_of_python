@@ -1,4 +1,4 @@
-cities = tuple(input().split())
-if "Москва" not in cities:
-    cities += 'Москва',
-print(*cities)
+marks = set(map(int, input().split()))
+bad = {1}
+
+print('НЕ ДОПУЩЕН' if  else 'ДОПУЩЕН')
