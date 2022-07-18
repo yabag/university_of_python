@@ -1,12 +1,11 @@
-import sys
+def is_even(num):
+    return num % 2 == 0
 
-lst_in = list(map(str.strip, sys.stdin.readlines()))
 
-books = [s.split(': ') for s in lst_in]
-d = {}
-
-for book in books:
-    if book[0] not in d:
-        d[book[0]] = {book[1]}
+n = int(input())
+while n != 1:
+    if is_even(n):
+        print(n)
     else:
-        d[book[0]] |= {book[1]}
+        continue
+    n = int(input())
