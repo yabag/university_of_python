@@ -1,6 +1,12 @@
+import sys
 
-lst = list(map(str.lower, input().split()))
-text_set = {word for word in lst}
-text_dict = {word: lst.count(word) for word in text_set}
+lst_in = list(map(str.strip, sys.stdin.readlines()))
 
-print(text_dict['и'] if 'и' in text_dict else 0)
+books = [s.split(': ') for s in lst_in]
+d = {}
+
+for book in books:
+    if book[0] not in d:
+        d[book[0]] = {book[1]}
+    else:
+        d[book[0]] |= {book[1]}
