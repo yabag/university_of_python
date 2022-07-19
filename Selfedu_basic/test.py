@@ -1,52 +1,24 @@
-import time
+def word_converter_from_kir(string, reg=True, sep="-"):
+    t = {'ё': 'yo', 'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd', 'е': 'e', 'ж': 'zh',
+     'з': 'z', 'и': 'i', 'й': 'y', 'к': 'k', 'л': 'l', 'м': 'm', 'н': 'n', 'о': 'o', 'п': 'p',
+     'р': 'r', 'с': 's', 'т': 't', 'у': 'u', 'ф': 'f', 'х': 'h', 'ц': 'c', 'ч': 'ch', 'ш': 'sh',
+     'щ': 'shch', 'ъ': '', 'ы': 'y', 'ь': '', 'э': 'e', 'ю': 'yu', 'я': 'ya'}
+
+    if reg:
+        string = string.lower()
+
+    s = ""
+    for c in string:
+        if c == ' ':
+            s += sep
+        elif c in t:
+            s += t[c]
+        else:
+            s += c
+
+    return print(s)
 
 
-def get_nod(a, b):
-    """Вычисляется НОД для натуральных чисел a и b
-    по быстрому алгоритму Евклида.
-    :param a: первое натуральное число
-    :param b: второе натуральное число
-    :return: НОД
-    """
-
-    if a < b:
-        a, b = b, a
-
-    while b != 0:
-        a, b = b, a % b
-
-    return a
-
-def test_nod(func):
-    # --- тест №1 ---------------
-    a = 28
-    b = 35
-    res = func(a, b)
-    if res == 7:
-        print("#tets1 - ok")
-    else:
-        print("#test1 - fail")
-
-    # --- тест №2 ---------------
-    a = 100
-    b = 1
-    res = func(a, b)
-    if res == 1:
-        print("#tets2 - ok")
-    else:
-        print("#test2 - fail")
-
-    # --- тест №3 ---------------
-    a = 2
-    b = 10000000000000
-    st = time.time()
-    res = func(a, b)
-    et = time.time()
-    dt = et - st
-    if res == 2 and dt < 1:
-        print("#tets3 - ok")
-    else:
-        print("#test3 - fail")
-
-
-test_nod(get_nod)
+s1 = input()
+word_converter_from_kir(s1)
+word_converter_from_kir(s1, sep='+')
