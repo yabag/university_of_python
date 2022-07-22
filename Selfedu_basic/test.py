@@ -1,15 +1,11 @@
-def os_psth(disk, *args, sep="\\", **kwargs):
-    # print(kwargs)
-    args = (disk, ) + args
-    if 'trim' in kwargs and kwargs['trim']:
-        args = [x.strip() for x in args]
+import sys
 
-    path = sep.join(args)
-    return path
+lst_in = list(map(str.strip, sys.stdin.readlines()))
 
+menu = {'Главная': 'home', 'Архив': 'archive', 'Новости': 'news'}
 
-p = os_psth("F:", " ~stepik.prg ",
-            " Добрый, добрый Python (Питон) ",
-            " 39\\p39. Функции.docx ",
-            sep="/")
-print(p)
+add_in_menu = {k: v for k, v in [s.split('=') for s in lst_in]}
+
+menu.update(add_in_menu)
+
+print(**menu)
