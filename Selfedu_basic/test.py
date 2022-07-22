@@ -1,11 +1,16 @@
-import sys
+def is_isolate(a, b, c, d):
+    if a+b+c+d > 1:
+        return False
+    else:
+        return True
 
-lst_in = list(map(str.strip, sys.stdin.readlines()))
 
-menu = {'Главная': 'home', 'Архив': 'archive', 'Новости': 'news'}
-
-add_in_menu = {k: v for k, v in [s.split('=') for s in lst_in]}
-
-menu.update(add_in_menu)
-
-print(**menu)
+def verify(lst):
+    flag = True
+    for i in range(len(lst) - 1):
+        for j in range(len(lst) - 1):
+            if lst[i][j] == 1:
+                flag = is_isolate(lst[i][j], lst[i][j+1], lst[i+1][j], lst[i+1][j+1])
+                if not flag:
+                    return flag
+    return flag
