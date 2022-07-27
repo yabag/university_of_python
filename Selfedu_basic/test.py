@@ -1,12 +1,10 @@
-def counter_add(start):
-    def inner():
-        nonlocal start
-        start += 5
-        return start
-
-    return inner()
+def func_show(func):
+    return f"Площадь прямоугольника: {func}"
 
 
-k = int(input())
-cnt = counter_add(k)
-print(cnt())
+def get_sq(width, height):
+    return width * height
+
+
+res = get_sq(4, 2)
+print(res)
